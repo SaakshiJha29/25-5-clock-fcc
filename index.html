@@ -1,28 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FCC - 25 + 5 Clock</title>
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>25 + 5 Clock</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div id="root"></div>
 
-    <script src="./../../assets/react/react.production.min.js"></script>
-    <script src="./../../assets/react/react-dom.production.min.js"></script>
-    <script src="./../../assets/babel/babel.min.js"></script>
-    <script src="./script.js"></script>
-    <script src="./react-script.js" type="text/babel"></script>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<div class="wrapper">
+  <header>
+    <h1>25 + 5 Clock</h1>
+  </header>
 
-    <!-- Remove below comment to add the test-suite script -->
-    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+  <main>
+    <div class="controls-wrapper">
+      <div class="control-wrapper">
+        <h3 id="break-label">Break Length</h3>
+        <div class="control-display">
+          <div class="controls" id="break-dec">&#10092;</div>
+          <div id="break-length">5</div>
+          <div class="controls" id="break-inc">&#10093;</div>
+        </div>
+      </div>
+
+      <div class="control-wrapper">
+        <h3 id="session-label">Session Length</h3>
+        <div class="control-display">
+          <div class="controls" id="session-dec">&#10092;</div>
+          <div id="session-length">25</div>
+          <div class="controls" id="session-inc">&#10093;</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timer-wrapper">
+      <h3 id="timer-label">Session</h3>
+      <div id="time-left">25:00</div>
+
+      <div class="session-controls">
+        <button id="start_stop">Start</button>
+        <button id="reset">Reset</button>
+      </div>
+
+      <audio id="beep" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+    </div>
+  </main>
+</div>
+
+<script src="script.js"></script>
 </body>
-
 </html>
-
